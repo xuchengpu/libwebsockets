@@ -7,7 +7,7 @@
 #
 
 
-set(ANDROID_API_VER 24)
+set(ANDROID_API_VER 21)
 set(ABARCH1 arm)
 set(CMAKE_SYSTEM_PROCESSOR armv7a)
 set(NDK /Users/xuchengpu/Library/Android/sdk/ndk/21.1.6352462/)
