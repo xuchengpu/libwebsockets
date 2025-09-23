@@ -22,8 +22,8 @@ cmake .. -DCMAKE_TOOLCHAIN_FILE=../contrib/cross-aarch64-android.cmake \
 -DLIBEVENT_LIBRARIES="${ANDROID_LIBS_PATH}/libevent.a;${ANDROID_LIBS_PATH}/libevent_core.a;${ANDROID_LIBS_PATH}/libevent_extra.a" \
 -DOPENSSL_INCLUDE_DIRS="${BORINGSSL_INCLUDE}" \
 -DOPENSSL_LIBRARIES="${ANDROID_LIBS_PATH}/libssl.a;${ANDROID_LIBS_PATH}/libcrypto.a" \
--DLWS_WITHOUT_TESTAPPS=1 && \
 -DLWS_WITHOUT_EXTENSIONS=OFF \
 -DLWS_WITH_ZLIB=ON \
+-DLWS_WITHOUT_TESTAPPS=1 && \
 make && \
 cmake --install .
