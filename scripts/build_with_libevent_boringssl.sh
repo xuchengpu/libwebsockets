@@ -12,7 +12,7 @@ BORINGSSL_INCLUDE="/Users/xuchengpu/Desktop/Project/huanxin/publish/4.16.0/debug
 # 添加 ZLIB 路径
 NDK_PATH="/Users/xuchengpu/Library/Android/sdk/ndk/21.1.6352462"
 ZLIB_INCLUDE="${NDK_PATH}/sysroot/usr/include"
-ZLIB_LIB="${NDK_PATH}/sysroot/usr/lib/arm-linux-androideabi/libz.a"
+ZLIB_LIB="${NDK_PATH}/sysroot/usr/lib/i686-linux-android/libz.a"
 
 rm -f CMakeCache.txt && \
 cmake .. -DCMAKE_TOOLCHAIN_FILE=../contrib/cross-aarch64-android.cmake \
