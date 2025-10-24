@@ -5,9 +5,9 @@ mkdir build
 cd build
 
 # 设置Android和第三方库的路径变量
-ANDROID_LIBS_PATH="/Users/xuchengpu/Desktop/Project/huanxin/publish/4.16.0/debug/emclient-android/hyphenatechatsdk/libs/x86_64"
-LIBEVENT_INCLUDE="/Users/xuchengpu/Desktop/Project/huanxin/publish/4.16.0/debug/emclient-linux/3rd_party/libevent/include"
-BORINGSSL_INCLUDE="/Users/xuchengpu/Desktop/Project/huanxin/publish/4.16.0/debug/emclient-linux/3rd_party/boringssl/include"
+ANDROID_LIBS_PATH="/Users/xuchengpu/Desktop/Project/huanxin/publish/4.17.0/debug/emclient-android/hyphenatechatsdk/libs/x86_64"
+LIBEVENT_INCLUDE="/Users/xuchengpu/Desktop/Project/huanxin/publish/4.17.0/debug/emclient-linux/3rd_party/libevent/include"
+BORINGSSL_INCLUDE="/Users/xuchengpu/Desktop/Project/huanxin/publish/4.17.0/debug/emclient-linux/3rd_party/boringssl/include"
 
 # 添加 ZLIB 路径
 NDK_PATH="/Users/xuchengpu/Library/Android/sdk/ndk/21.1.6352462"
