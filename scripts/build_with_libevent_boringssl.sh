@@ -5,9 +5,9 @@ mkdir build
 cd build
 
 # 设置Android和第三方库的路径变量
-ANDROID_LIBS_PATH="/Users/xuchengpu/Desktop/Project/huanxin/publish/4.17.0/debug/emclient-android/hyphenatechatsdk/libs/x86"
-LIBEVENT_INCLUDE="/Users/xuchengpu/Desktop/Project/huanxin/publish/4.17.0/debug/emclient-linux/3rd_party/libevent/include"
-BORINGSSL_INCLUDE="/Users/xuchengpu/Desktop/Project/huanxin/publish/4.17.0/debug/emclient-linux/3rd_party/boringssl/include"
+ANDROID_LIBS_PATH="/Users/xuchengpu/Desktop/Project/huanxin/publish/4.19.0/debug/emclient-android/hyphenatechatsdk/libs/x86"
+LIBEVENT_INCLUDE="/Users/xuchengpu/Desktop/Project/huanxin/publish/4.19.0/debug/emclient-linux/3rd_party/libevent/include"
+BORINGSSL_INCLUDE="/Users/xuchengpu/Desktop/Project/huanxin/publish/4.19.0/debug/emclient-linux/3rd_party/boringssl/include"
 
 # 添加 ZLIB 路径
 NDK_PATH="/Users/xuchengpu/Library/Android/sdk/ndk/21.1.6352462"
@@ -31,6 +31,7 @@ cmake .. -DCMAKE_TOOLCHAIN_FILE=../contrib/cross-aarch64-android.cmake \
 -DLWS_WITH_ZLIB=ON \
 -DLWS_ZLIB_INCLUDE_DIRS="${ZLIB_INCLUDE}" \
 -DLWS_ZLIB_LIBRARIES="${ZLIB_LIB}" \
+-DLWS_IPV6=ON \
 -DLWS_WITHOUT_TESTAPPS=1 && \
 make && \
 cmake --install .
