@@ -32,6 +32,8 @@ cmake .. -DCMAKE_TOOLCHAIN_FILE=../contrib/cross-aarch64-android.cmake \
 -DLWS_ZLIB_INCLUDE_DIRS="${ZLIB_INCLUDE}" \
 -DLWS_ZLIB_LIBRARIES="${ZLIB_LIB}" \
 -DLWS_IPV6=ON \
--DLWS_WITHOUT_TESTAPPS=1 && \
+-DLWS_WITHOUT_TESTAPPS=1 \
+-DLWS_WITH_HTTP_DIGEST_AUTH=OFF \
+-DLWS_HAVE_X509_VERIFY_PARAM_set1_host=1 && \
 make && \
 cmake --install .
