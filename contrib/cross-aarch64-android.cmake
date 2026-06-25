@@ -7,18 +7,18 @@
 #
 
 
-set(ANDROID_API_VER 24)
-set(ABARCH1 arm64)
-set(CMAKE_SYSTEM_PROCESSOR aarch64)
-set(NDK /opt/android/ndk/21.1.6352462/)
+set(ANDROID_API_VER 21)
+set(ABARCH1 arm)
+set(CMAKE_SYSTEM_PROCESSOR armv7a)
+set(NDK /Users/xuchengpu/Library/Android/sdk/ndk/21.1.6352462/)
 set(CROSS_SYSROOT "${NDK}/platforms/android-${ANDROID_API_VER}/arch-${ABARCH1}")
-set(BUILD_ARCH linux-x86_64)
+set(BUILD_ARCH darwin-x86_64)
 
 #
 # Rest should be computed from the above
 #
 set(TC_PATH ${NDK}/toolchains/llvm/prebuilt/${BUILD_ARCH})
-set(TC_BASE ${TC_PATH}/bin/${CMAKE_SYSTEM_PROCESSOR}-linux-android)
+set(TC_BASE ${TC_PATH}/bin/${CMAKE_SYSTEM_PROCESSOR}-linux-androideabi)
 set(PLATFORM android)
 set(CMAKE_SYSTEM_NAME Linux)
 set(CMAKE_C_COMPILER "${TC_BASE}${ANDROID_API_VER}-clang")
@@ -42,8 +42,7 @@ if (CMAKE_BUILD_TYPE MATCHES RELEASE OR CMAKE_BUILD_TYPE MATCHES Release OR CMAK
 endif()
 
 #-nostdlib
-SET(CMAKE_C_FLAGS "-DGCC_VER=\"\\\"$(GCC_VER)\\\"\" -DARM64=1 -D__LP64__=1 -Os -g3 -fpie -mstrict-align -fPIC -ffunction-sections -fdata-sections -D__ANDROID_API__=${ANDROID_API_VER} -Wno-pointer-sign" CACHE STRING "" FORCE)
-
+SET(CMAKE_C_FLAGS "-DGCC_VER=\"\\\"$(GCC_VER)\\\"\" -Wno-error=shorten-64-to-32 -Wno-error=sign-conversion -Wno-error=sign-compare -DARM=1 -Os -g3 -fpie -fPIC -ffunction-sections -fdata-sections -D__ANDROID_API__=${ANDROID_API_VER} -Wno-pointer-sign" CACHE STRING "" FORCE)
 
 set(CMAKE_FIND_ROOT_PATH "${CROSS_SYSROOT}")
 
